@@ -24,11 +24,13 @@
 //console.log(ejemploNodeList);
 
 //PUNTO 2
-const listaDesordenado = document.getElementsByTagName("ul");
-
-const elementos=["","","",""];
-elementos.forEach(function(elementos){
+//array con los strings para cada elemento Li
+const mensajes=["Item 1","Item 2","Item 3","Item 4"]; 
+let listaDesordenado = document.querySelector("ul"); 
+for(i=0;i<mensajes.length;i++){
+    //creación de los Li e inserción en el dom, contenido dentro de cada Li y estilo
     const nuevoLi=document.createElement("li");
     listaDesordenado.append(nuevoLi);
-    nuevoLi.style.backgroundColor="red"
-});
+    nuevoLi.textContent=mensajes[i];
+    nuevoLi.style.backgroundColor="red";
+}
